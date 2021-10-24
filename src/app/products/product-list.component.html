@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class='table-responsive'>
-      <table class='table' *ngIf='productList.length'>
+      <table class='table' *ngIf='products.length'>
         <thead>
           <tr>
             <th>
@@ -27,9 +27,9 @@
             <th>Price</th>
             <th>5 Star Rating</th>
           </tr>
-          <tr *ngFor='let prod of productsFiltered'>
+          <tr *ngFor='let prod of filteredProducts'>
             <td >
-              <img *ngIf="showImage" [src]='prod.imageUrl'
+              <img *ngIf="showImage" [alt]='prod.productName' [src]='prod.imageUrl'
                     [title]='prod.productName'
                     [style.width.px]='imageWidth'
                     [style.margin.px]='imageMargin'>
